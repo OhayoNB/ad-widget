@@ -22,7 +22,7 @@ async function renderAds() {
   const strHTML = ads.map((ad) => {
     console.log(ad)
     return `
-          <div class="content">
+          <div class="content" onClick="openAd('${ad.url}')">
           <div class="media">
               <img src="${ad.thumbnail[0].url}" alt="ad image" />
           </div>
@@ -42,6 +42,10 @@ async function renderAds() {
   })
 
   document.querySelector('.ads-list').innerHTML = strHTML.join('')
+}
+
+function openAd(url) {
+  window.open(url, '_blank')
 }
 
 renderAds()
