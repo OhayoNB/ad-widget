@@ -3,12 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.taboola.com//wp-content/uploads/2020/04/favicon.png"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Taboola assignment</title>
   </head>
+
   <body>
     <header class="main-header full flex space-between align-center">
       <h1>Taboola assignment</h1>
     </header>
+    <section class="ads-section">
+      <section class="ads-list"></section>
+
+      <!-- hover style
+        box-shadow: 0 0 0 1 rgba(0,0,0,0.0578),0px 4px 8px rgba(0,0,0,0.14);
+     -->
+
+      <!-- Example of a card -->
+      <div class="content">
+        <!-- inside the media-overlay it will be the photo -->
+        <div class="media-overlay"></div>
+        <!-- another div with the text of the ad -->
+        <div class="text">
+          <!-- a bold text as a link -->
+          <a href=""></a>
+        </div>
+        <!-- the action tray is used for the Ad symbol -->
+        <div class="action-tray">
+          <!-- this is the actual ad button -->
+          <div class="footer-start">
+            <!-- this is the div that have all the style:
+    display: flex;
+    align-items: center;
+    border: 0.5px solid rgba(26, 26, 26, 0.3);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 11px;
+    height: 16px;
+    margin-inline-end: 6px;
+    min-width: 22px;
+    padding: 1px 4px;
+    overflow: hidden;
+            -->
+            <div class="ad-label">
+              <!-- inside every ad, there is an a tag with the text -->
+              <!-- style:
+                color: inherit;
+    pointer-events: auto;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+                 -->
+              <a href="" class="ad-label-text"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
