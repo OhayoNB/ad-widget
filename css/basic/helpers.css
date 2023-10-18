@@ -18,6 +18,10 @@
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+}
+
 .clean-list {
   margin: 0;
   padding: 0;

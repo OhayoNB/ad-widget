@@ -12,3 +12,18 @@
   font-family: montserrat-bold;
   src: url(../../fonts/Montserrat/Montserrat-Bold.ttf);
 }
+
+@font-face {
+  font-family: opensans-bold;
+  src: url(../../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: opensans;
+  src: url(../../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: opensans-light;
+  src: url(../../fonts/Open_Sans/OpenSans-Light.ttf);
+}

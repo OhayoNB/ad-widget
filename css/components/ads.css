@@ -1,0 +1,64 @@
+.ads-section {
+  padding: 2rem;
+}
+
+.ads-list {
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.ads-list .content {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(230, 230, 230, 0.2);
+  font-family: opensans-bold, sans-serif;
+}
+
+.ads-list .content:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0578), 0px 4px 8px rgba(0, 0, 0, 0.14);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.ads-list .content .media > img {
+  height: 160px;
+  object-fit: cover;
+}
+
+.ads-list .content .text {
+  padding: 1rem;
+}
+
+.ads-list .content .text p {
+  font-size: 12px;
+  color: var(--clr3);
+  margin: 0;
+}
+
+.ads-list .content .text span {
+  font-size: 20px;
+  color: var(--clr3);
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.ads-list .content .action-tray .footer-start .ad-label {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid rgba(26, 26, 26, 0.3);
+  border-radius: 4px;
+  height: 16px;
+  margin-inline-start: 14px;
+  margin-inline-end: 8px;
+  margin-block-end: 10px;
+  max-width: 22px;
+  padding: 1px 4px;
+  overflow: hidden;
+}
+
+.ads-list .content .action-tray .footer-start .ad-label-text {
+  font-size: 11px;
+  color: var(--clr3);
+  font-family: opensans-light, sans-serif;
+}

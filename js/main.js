@@ -18,7 +18,30 @@ async function getAds() {
 
 async function renderAds() {
   const ads = await getAds()
-  console.log(ads)
+
+  const strHTML = ads.map((ad) => {
+    console.log(ad)
+    return `
+          <div class="content">
+          <div class="media">
+              <img src="${ad.thumbnail[0].url}" alt="ad image" />
+          </div>
+          <div class="text">
+                <p>${ad.branding}</p>
+              <span>${ad.name}</span>
+          </div>
+          <div class="action-tray">
+          <div class="footer-start">
+          <div class="ad-label">
+          <a href="${ad.url}" class="ad-label-text">Ad</a>
+          </div>
+          </div>
+          </div>
+          </div>
+          `
+  })
+
+  document.querySelector('.ads-list').innerHTML = strHTML.join('')
 }
 
 renderAds()

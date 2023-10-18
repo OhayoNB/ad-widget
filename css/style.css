@@ -18,6 +18,10 @@
 
 /* COMPONENTS */
 
-/* main header */
+/* header */
 
 @import './components/header.css';
+
+/* ads section */
+
+@import './components/ads.css';
