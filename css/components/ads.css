@@ -13,6 +13,7 @@
   overflow: hidden;
   background-color: rgba(230, 230, 230, 0.2);
   font-family: opensans-bold, sans-serif;
+  height: 304px;
 }
 
 .ads-list .content:hover {
@@ -41,6 +42,11 @@
   color: var(--clr3);
   display: block;
   margin-top: 0.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ads-list .content .action-tray .footer-start .ad-label {
