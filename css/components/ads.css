@@ -22,7 +22,15 @@
   cursor: pointer;
 }
 
-.ads-list .content .media > img {
+.ads-list .content .media {
+  height: 160px;
+  width: 100%;
+}
+
+.ads-list .content .media img {
+  font-family: opensans-bold, sans-serif;
+  font-size: 14px;
+  color: var(--clr3);
   height: 160px;
   object-fit: cover;
 }
