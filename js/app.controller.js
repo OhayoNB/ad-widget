@@ -1,28 +1,14 @@
 'use strict'
 
-async function getAds() {
-  try {
-    const res = await fetch(
-      'http://api.taboola.com/1.0/json/taboola-templates/recommendations.get?publisher id=taboola-templates&app.type=desktop&app.apikey=f9040ab1b9c802857aa783c469d0e0ff7e7366e4&source.id=141411111&count=10&source.type=photo',
-      {
-        method: 'GET',
-      }
-    )
-    const data = await res.json()
-    console.log(data)
-    return data.list
-  } catch (err) {
-    console.error(err)
-  }
-}
+import { adService } from './service/ad.service.js'
 
 async function renderAds() {
-  const ads = await getAds()
+  const ads = await adService.getAds()
 
   const strHTML = ads.map((ad) => {
     console.log(ad)
     return `
-          <div class="content" onClick="openAd('${ad.url}')">
+          <div class="content" data-url="${ad.url}">
           <div class="media">
               <img src="${ad.thumbnail[0].url}" alt="ad image" />
           </div>
@@ -42,6 +28,12 @@ async function renderAds() {
   })
 
   document.querySelector('.ads-list').innerHTML = strHTML.join('')
+
+  document.querySelectorAll('.content').forEach((adElement) => {
+    adElement.addEventListener('click', () =>
+      openAd(adElement.getAttribute('data-url'))
+    )
+  })
 }
 
 function openAd(url) {
