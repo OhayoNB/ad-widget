@@ -10,10 +10,13 @@ async function renderAds() {
 
     // Loop over the ads and generate HTML string from each ad
     const strHTML = ads.map((ad) => {
+      const altText = ad.thumbnail[0].url
+        ? `${ad.branding || ad.name || 'Advertisement'} - Click to view`
+        : 'Image not available'
       return `
       <div class="content" data-url="${ad.url}">
       <div class="media">
-      <img src="${ad.thumbnail[0].url}" alt="ad image" />
+      <img src="${ad.thumbnail[0].url}" alt="${altText}" />
       </div>
       <div class="text">
       <p>${ad.branding}</p>
