@@ -1,9 +1,7 @@
-'use strict'
-
 import { adService } from './service/ad.service.js'
 
 // Function to render ads on the page
-async function renderAds() {
+export async function renderAds() {
   try {
     // Get ads from the service
     const ads = await adService.getAds()
@@ -15,21 +13,21 @@ async function renderAds() {
         : 'Image not available'
       return `
       <div class="content" data-url="${ad.url}">
-      <div class="media">
-      <img src="${ad.thumbnail[0].url}" alt="${altText}" />
-      </div>
-      <div class="text">
-      <p>${ad.branding}</p>
-      <span>${ad.name}</span>
-      </div>
-          <div class="action-tray">
+        <div class="media">
+          <img src="${ad.thumbnail[0].url}" alt="${altText}" />
+        </div>
+        <div class="text">
+          <p>${ad.branding}</p>
+          <span>${ad.name}</span>
+        </div>
+        <div class="action-tray">
           <div class="footer-start">
-          <div class="ad-label">
-          <a href="${ad.url}" class="ad-label-text">Ad</a>
+            <div class="ad-label">
+              <a href="${ad.url}" class="ad-label-text">Ad</a>
+            </div>
           </div>
-          </div>
-          </div>
-          </div>
+        </div>
+      </div>
           `
     })
 
@@ -51,6 +49,16 @@ async function renderAds() {
 function openAd(url) {
   window.open(url, '_blank')
 }
+
+// Function to start QUnit tests
+function startQUnitTests() {
+  const qunitDiv = document.getElementById('qunit')
+  qunitDiv.style.display = 'block'
+  QUnit.start()
+}
+
+// Expose the startQUnitTests function to start the tests from the console
+window.startQUnitTests = startQUnitTests
 
 // Call the renderAds function when the page loads
 renderAds()

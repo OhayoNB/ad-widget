@@ -39,6 +39,7 @@
 
 .ads-list .content .text {
   padding: 1rem;
+  height: 112px;
 }
 
 .ads-list .content .text p {
@@ -77,4 +78,19 @@
   font-size: 0.6875rem;
   color: var(--clr3);
   font-family: opensans-light, sans-serif;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 600px) {
+  .ads-list .content {
+    height: 288px;
+  }
+
+  .ads-list .content .text {
+    height: 94px;
+  }
+
+  .ads-list .content .text span {
+    font-size: 1rem;
+  }
 }
