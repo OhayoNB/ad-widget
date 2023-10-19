@@ -14,7 +14,9 @@ export async function renderAds() {
       return `
       <div class="content" data-url="${ad.url}">
         <div class="media">
-          <img src="${ad.thumbnail[0].url}" alt="${altText}" />
+          <img src="${ad.thumbnail[0].url}"
+          alt="${altText}"
+          onerror="this.onerror=null; this.src='../assets/img_not_available.png'" />
         </div>
         <div class="text">
           <p>${ad.branding}</p>
