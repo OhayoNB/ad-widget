@@ -29,7 +29,7 @@
 
 .ads-list .content .media img {
   font-family: opensans-bold, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--clr3);
   height: 160px;
   object-fit: cover;
@@ -40,13 +40,13 @@
 }
 
 .ads-list .content .text p {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: var(--clr3);
   margin: 0;
 }
 
 .ads-list .content .text span {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--clr3);
   display: block;
   margin-top: 0.5rem;
@@ -72,7 +72,7 @@
 }
 
 .ads-list .content .action-tray .footer-start .ad-label-text {
-  font-size: 11px;
+  font-size: 0.6875rem;
   color: var(--clr3);
   font-family: opensans-light, sans-serif;
 }

@@ -9,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  font-size: 1.1875rem;
+  font-size: 16px;
 }
 
 img {
@@ -19,8 +19,4 @@ img {
 a {
   color: var(--clr2);
   text-decoration: none;
-}
-
-li {
-  transition: 0.2s;
 }
