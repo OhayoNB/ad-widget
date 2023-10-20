@@ -9,7 +9,7 @@ async function getAds() {
   try {
     // Make a GET request to the API
     const res = await fetch(
-      `http://api.taboola.com/1.0/json/taboola-templates/recommendations.get?publisher id=taboola-templates&app.type=desktop&app.apikey=${API_KEY}&source.id=141411111&count=10&source.type=photo`,
+      `https://api.taboola.com/1.0/json/taboola-templates/recommendations.get?publisher id=taboola-templates&app.type=desktop&app.apikey=${API_KEY}&source.id=141411111&count=10&source.type=photo`,
       {
         method: 'GET',
       }
