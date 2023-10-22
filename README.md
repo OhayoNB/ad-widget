@@ -15,6 +15,7 @@ Before you begin, make sure you have the following tools installed:
 
 - Web Browser: Modern web browser such as Chrome, Firefox, or Safari.
 - Live Server: To view and run the application smoothly, it is recommended to use a live server. You can use the Live Server extension if you are using Visual Studio Code. [Download Live Server for VS Code.](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- VPN to the United States: Due to restrictions with the API, a VPN set to the United States is required to make successful calls. Ensure your VPN is active and set to the U.S. before proceeding.
 
 ## Getting Started
 
