@@ -27,6 +27,8 @@ async function getAds() {
 
     // Display error message on the page
     const errorMessageEl = document.querySelector('.error-message')
-    if (errorMessageEl) errorMessageEl.innerText = err.message
+    if (errorMessageEl)
+      errorMessageEl.innerText =
+        'Oops! Something went wrong. Please try again later.'
   }
 }
