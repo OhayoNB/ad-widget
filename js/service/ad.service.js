@@ -2,7 +2,7 @@ export const adService = {
   getAds,
 }
 
-const API_KEY = 'f9040ab1b9c802857aa783c469d0e0ff7e7366e4'
+const API_KEY = '<YOUR_API_KEY_HERE>'
 
 // Function to fetch ads from the API
 async function getAds() {
